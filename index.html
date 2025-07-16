@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PocketSanti</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    .banner {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .profile {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin: -75px auto 0;
+      display: block;
+      object-fit: cover;
+      position: relative;
+      background: white;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    /* Add some playful animations */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin: 20px 0;
+    }
+
+    .bio {
+      text-align: center;
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .feature {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border: 2px solid #2196F3;
+      transition: all 0.3s ease;
+    }
+
+    .feature h3 {
+      color: #2196F3;
+      margin-top: 0;
+    }
+
+    .feature:hover {
+      transform: scale(1.02);
+      background: #f0f8ff;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      background: #FF6B6B;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <img src="/banner.png" alt="Pocket Santi Banner" class="banner">
+  <img src="/Cropped_Image (3) (1).png" alt="Pocket Santi" class="profile">
+  
+  <div class="container">
+    <h1>I'm Santi!</h1>
+    
+    <div class="bio">
+
+      Hi there! I'm a tiny person who might have accidentally met
+      loads of people but
+      now I'm here to do it on purpose, 80 TIMES the people! This is my profile page and you might find websites I create on this domain.
+    </div>
+<h1>Who I am...</h1>
+    <div class="features">
+      <div class="feature">
+        <h3>Roblox Player</h3>
+        <p>I play Roblox and create games on it! The games I play are Infinite Autocorrect, The Presentation Experience, RetroStudio and a lot more.</p>
+      </div>
+
+      <div class="feature">
+        <h3>Creates Projects</h3>
+        <p>Sometimes I might create projects with effort but sometimes I might just create Scratch Cat cloning himself, changing colour and spinning with the title "bored".
+ Want to see what I'm working on? Go check me at "PocketSanti" on Scratch!</p>
+      </div>
+<h1>Random memes I made while making this page...</h1>
+      <div class="feature">
+        <h3>Rec Room? Naaah, Deck Room.</h3>
+        <p>Deck Room is the deck in the, uhhh, ship?
+        Deck Room is the deck in the, uhhh, ship?
+        Deck Room is the deck in the, uhhh, ship?
+        Deck Room is the deck in the, uhhh, ship?</p>
+      </div>
+    </div>
+    <h1>Reviews...</h1>
+    <div class="feature">
+        <h3>bob - No ★ Provided</h3>
+        <p>YEEEEEEEEEEE
+        YEEEEE</p>
+      </div>
+    </div>
+<div class="feature">
+        <h3>guy - ★★★★★</h3>
+        <p>I do not know what is this review because Pocket Santi made this test review.</p>
+      </div>
+    </div>
+
+  <script type="module">
+    // Enhanced animations for features
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0) rotate(0)';
+        }
+      });
+    });
+
+    document.querySelectorAll('.feature').forEach((el, index) => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(20px) rotate(-2deg)';
+      el.style.transition = 'all 0.6s ease-out';
+      el.style.transitionDelay = (index * 0.2) + 's';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
